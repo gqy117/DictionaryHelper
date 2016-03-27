@@ -15,7 +15,7 @@
             // Arrange
             IndividualPayGPaymentSummary paymentSummary = new IndividualPayGPaymentSummary
             {
-                TFN = "865414088",
+                TFN = 865414088,
                 Name = new Name
                 {
                     Title = "Mr.",
@@ -30,8 +30,8 @@
                         ABNOrWPN = "12345678",
                         TaxWithheld = new TaxWithheld()
                         {
-                            Dollars = "999",
-                            Cents = "12"
+                            Dollars = 999,
+                            Cents = 12
                         }
                     }
                 }

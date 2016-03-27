@@ -2,8 +2,8 @@ namespace ObjectExtensions.Test.Model
 {
     public class TaxWithheld
     {
-        public string Dollars { get; set; }
+        public int Dollars { get; set; }
 
-        public string Cents { get; set; }
+        public int Cents { get; set; }
     }
 }
