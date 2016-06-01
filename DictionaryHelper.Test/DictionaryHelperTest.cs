@@ -50,6 +50,26 @@
             expected.Add("Payments[0].ABNOrWPN", "12345678");
             expected.Add("Payments[0].TaxWithheld.Dollars", "999");
             expected.Add("Payments[0].TaxWithheld.Cents", "12");
+            expected.Add("Address", string.Empty);
+
+            actual.ShouldAllBeEquivalentTo(expected);
+        }
+
+        [TestMethod]
+        public void AsDictionary_ShouldReturnEmptyString_WhenStringIsNull()
+        {
+            // Arrange
+            IndividualPayGPaymentSummary paymentSummary = new IndividualPayGPaymentSummary
+            {
+                Address = null
+            };
+
+            // Act
+            IDictionary<string, string> dictionary = paymentSummary.MapToDictionary();
+            string actual = dictionary["Address"];
+
+            // Assert
+            string expected = "";
 
             actual.ShouldAllBeEquivalentTo(expected);
         }

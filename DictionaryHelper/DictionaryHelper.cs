@@ -26,7 +26,7 @@
             {
                 var key = AddNamePrefix(prefix, p.Name);
 
-                object value = p.GetValue(source, null);
+                object value = p.GetValue(source, null) ?? string.Empty;
                 Type valueType = value.GetType();
 
                 if (valueType.IsPrimitive || valueType == typeof(String))

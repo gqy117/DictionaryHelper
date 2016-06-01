@@ -9,5 +9,7 @@ namespace ObjectExtensions.Test
         public Name Name { get; set; }
 
         public IList<Payment> Payments { get; set; }
+
+        public string Address { get; set; }
     }
 }
